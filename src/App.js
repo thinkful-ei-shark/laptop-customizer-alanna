@@ -5,6 +5,8 @@ import slugify from 'slugify';
 
 import './App.css';
 import Header from './Header'
+import MainForm from './MainForm';
+import MainSummary from './MainSummary'
 
 // This object will allow us to
 // easily convert numbers into US dollar values
@@ -99,20 +101,8 @@ class App extends Component {
       <div className="App">
         <Header />
         <main>
-          <form className="main__form">
-            <h2>Customize your laptop</h2>
-            {features}
-          </form>
-          <section className="main__summary">
-            <h2>Your cart</h2>
-            {summary}
-            <div className="summary__total">
-              <div className="summary__total__label">Total</div>
-              <div className="summary__total__value">
-                {USCurrencyFormat.format(total)}
-              </div>
-            </div>
-          </section>
+          <MainForm features= {features}/>
+          <MainSummary currencyFormat = {USCurrencyFormat} total={total} summary={summary}/>
         </main>
       </div>
     );
