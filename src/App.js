@@ -58,7 +58,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <main>
-          <MainForm features={this.props.features} currencyFormat={USCurrencyFormat} selected={this.state.selected}/>
+          <MainForm onChange= {this.updateFeature} features={this.props.features} currencyFormat={USCurrencyFormat} selected={this.state.selected}/>
           <MainSummary currencyFormat = {USCurrencyFormat} total={total} selected = {this.state.selected}/>
         </main>
       </div>
