@@ -7,6 +7,7 @@ import './App.css';
 import Header from './Header'
 import MainForm from './MainForm';
 import MainSummary from './MainSummary'
+import FEATURES from './Features';
 
 // This object will allow us to
 // easily convert numbers into US dollar values
@@ -55,7 +56,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <main>
-          <MainForm onChange= {this.updateFeature} features={this.props.features} currencyFormat={USCurrencyFormat} selected={this.state.selected}/>
+          <MainForm onChange= {this.updateFeature} features={FEATURES} currencyFormat={USCurrencyFormat} selected={this.state.selected}/>
           <MainSummary currencyFormat = {USCurrencyFormat} total={total} selected = {this.state.selected}/>
         </main>
       </div>
